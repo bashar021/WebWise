@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "WebWise",
+  "version": "1.0",
+  "description": "Description of your extension",
+  "author": "Bashar Alam",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "history",
+    "storage",
+    "idle",
+    "alarms"
+  ],
+  "omnibox": {
+    "keyword": "mdn"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

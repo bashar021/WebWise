@@ -37,7 +37,7 @@ The NewTab Customizer Chrome Extension offers a personalized browsing experience
 
 7 - [chrome.windows](#chrome.windows)
 
-8 - [chrome.alarms](chrome.alarms)
+8 - [chrome.alarms](#section8)
 
 
 ## chrome.storage
@@ -322,7 +322,7 @@ chrome.windows.getCurrent(function (window) {
 
 
 
-## chrome.alarms
+## chrome.alarms <a name="section8"></a>
 
 The `chrome.alarms.create` method is a Chrome Extension API used to create an alarm. Alarms allow extensions to schedule code to be executed at specified intervals. Here's a detailed explanation of the parameters used in the chrome.alarms.create method:
 

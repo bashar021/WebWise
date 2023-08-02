@@ -21,26 +21,26 @@ The NewTab Customizer Chrome Extension offers a personalized browsing experience
 
 
 ## Chrome Api used 
-1 - [chrome.storage](#chrome.storage)
+1 - [chrome.storage](#section1)
 
-2 - [chrome.idle](#chrome.idle)
+2 - [chrome.idle](#section2)
 
-3 - [chrome.runtime](#chrome.runtime)
+3 - [chrome.runtime](#section3)
 
-3 - [chrome.history](#chrome.history)
+4 - [chrome.history](#section4)
 
-4 - [Message passing](#Message-passing)
+5 - [Message passing](#section5)
 
-5 - [chrome.runtime.sendMessage](#chrome.runtime.sendMessage)
+6 - [chrome.runtime.sendMessage](#section6)
 
-6 - [chrome.tabs](#chrome.tabs)
+7 - [chrome.tabs](#section7)
 
-7 - [chrome.windows](#chrome.windows)
+8 - [chrome.windows](#section8)
 
-8 - [chrome.alarms](#section8)
+9 - [chrome.alarms](#section9)
 
 
-## chrome.storage
+## chrome.storage  <a name="section1"></a>
 
 The `chrome.storage.local.get()` is an API provided by Google Chrome for extensions to access the local storage. It allows you to retrieve data stored in the local storage of your Chrome extension.
 
@@ -78,7 +78,7 @@ chrome.storage.local.set({username:value}, function () {
 [Reference](https://developer.chrome.com/docs/extensions/reference/storage/)
 
 
-## chrome.idle
+## chrome.idle  <a name="section2"></a>
 
 The `chrome.idle.queryState()` method is an API provided by the Google Chrome browser extension platform. It allows you to query the current idle state of the user's device. The method takes two arguments: detectionIntervalInSeconds and a callback function.
 
@@ -105,7 +105,7 @@ chrome.idle.queryState(15, (state) => {
 [Reference](https://developer.chrome.com/docs/extensions/reference/idle/)
 
 
-## chrome.runtime
+## chrome.runtime  <a name="section3"></a>
 
 The chrome.runtime.onInstalled event listener is part of the Chrome Extension API. It allows you to listen for when your extension has been installed, updated, or reloaded in the user's browser. Here's a detailed explanation of the event:
 
@@ -147,7 +147,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 [Reference](https://developer.chrome.com/docs/extensions/reference/runtime/)
 
 
-## chrome.history
+## chrome.history  <a name="section4"></a>
 
 The ```chrome.history.search``` method is part of the Chrome Extension API, and it allows you to retrieve a list of user's browsing history items that match a given query. Here's a detailed explanation of the method:
 
@@ -186,7 +186,7 @@ chrome.history.search({ text: 'example', maxResults: 10 }, function (historyItem
 
 
 
-## Message passing
+## Message passing  <a name="section5"></a>
 
 
 The `chrome.runtime.onMessage` is an event listener provided by the Chrome Extension API. It allows your extension to listen for messages sent from other parts of the extension, such as content scripts or other extension components. Here's a detailed explanation of this event listener:
@@ -217,7 +217,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 
 
 
-## chrome.runtime.sendMessage
+## chrome.runtime.sendMessage  <a name="section6"></a>
 
 The `chrome.runtime.sendMessage` is a method provided by the Chrome Extension API. It allows your extension to send messages from one component (such as a content script or a popup) to another component (such as a background script or another content script). Here's a detailed explanation of this method:
 
@@ -247,7 +247,7 @@ chrome.runtime.sendMessage({ action: action, query: query }, function (response)
 [Reference](https://developer.chrome.com/docs/extensions/reference/runtime/)
 
 
-## chrome.tabs
+## chrome.tabs  <a name="section7"></a>
 
 The `chrome.tabs.query` method is an API provided by Chrome extensions to query information about tabs in the current browser window. Here's a detailed explanation of this method:
 
@@ -293,7 +293,7 @@ main();
 [Reference](https://developer.chrome.com/docs/extensions/reference/tabs/)
 
 
-## chrome.windows
+## chrome.windows  <a name="section8"></a>
 
 The `chrome.windows.getCurrent` method is an API provided by Chrome extensions to retrieve information about the current window. Here's a detailed explanation of this method:
 
@@ -322,7 +322,7 @@ chrome.windows.getCurrent(function (window) {
 
 
 
-## chrome.alarms <a name="section8"></a>
+## chrome.alarms <a name="section9"></a>
 
 The `chrome.alarms.create` method is a Chrome Extension API used to create an alarm. Alarms allow extensions to schedule code to be executed at specified intervals. Here's a detailed explanation of the parameters used in the chrome.alarms.create method:
 
